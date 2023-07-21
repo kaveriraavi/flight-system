@@ -1,0 +1,26 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+//occurance
+int main() {
+    // Write C code here
+    char str[100];
+    gets(str);
+    int len = strlen(str);
+    for(int i=0;i<len;i++){
+        int count=0;
+        for(int j=0;j<len;j++){
+            if(str[i]==str[j]){
+                count++;
+            }
+            if(j<i&&str[i]==str[j]){
+                break;
+            }
+            if(j==len-1){
+                printf("char %c occurance %d\n",str[i],count);
+            }
+        }
+      
+    }
+
+    return 0;
+}
