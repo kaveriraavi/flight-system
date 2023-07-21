@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main()
+{
+    int num;
+    printf("enter the number :");
+    scanf("%d",&num);
+    int rem;
+    int oct[100];
+    int i=0;
+    while(num!=0)
+    {
+        rem=num%8;
+        oct[i]=rem;
+        i++;
+        num=num/8;
+    }
+    for(int j=i-1;j>=0;j--)
+    {
+        printf("%d",oct[j]);
+    }
+}
